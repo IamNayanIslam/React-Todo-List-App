@@ -8,6 +8,7 @@ export const StyledTodoContainer = styled.li`
   border-bottom: 1px solid #40a4ff;
   padding: 5px 20px;
   padding-bottom: 10px;
+  margin-bottom: 10px;
 
   @media screen and (max-width: 500px) {
     padding: 0px 20px;
