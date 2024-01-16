@@ -76,5 +76,6 @@ export const StyledNoTodo = styled.div`
 
   img {
     width: 200px;
+    margin-bottom: 20px;
   }
 `;
