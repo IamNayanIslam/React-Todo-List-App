@@ -10,10 +10,8 @@ const Todos = () => {
   return (
     <>
       <StyledTodosContainer>
-        {state.todos.length > 0 ? (
-          state.todos.map((todo) => (
-            <SignleTodo key={todo.description + Date.now()} todo={todo} />
-          ))
+        {state?.todos.length > 0 ? (
+          state.todos.map((todo) => <SignleTodo key={todo.id} todo={todo} />)
         ) : (
           <>
             <StyledNoTodo>

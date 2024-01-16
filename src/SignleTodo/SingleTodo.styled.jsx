@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const StyledTodoContainer = styled.li`
   list-style: none;
@@ -22,8 +22,18 @@ export const StyledTodoContainer = styled.li`
     color: #6cc49a;
   }
 
+  input {
+    text-align: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #40a4ff;
+    margin: 16px 0;
+    color: #fff;
+  }
+
   p {
-    font-size: 20px;
+    font-size: 16px;
     color: #40a4ff;
   }
 
@@ -34,8 +44,8 @@ export const StyledTodoContainer = styled.li`
 `;
 
 export const StyledBtnContainer = styled.div`
-  width: 120px;
   display: flex;
+  gap: 10px;
   align-items: center;
   justify-content: space-around;
 

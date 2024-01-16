@@ -14,7 +14,7 @@ const AddTodo = () => {
       id: Date.now(),
       description: e.target.description.value,
       isComplete: false,
-      edit: false,
+      isEdit: false,
     };
 
     if (newTodo.description.trim() === "") {
@@ -45,7 +45,7 @@ const AddTodo = () => {
     <>
       <h1>
         {" "}
-        <LuClipboardEdit /> Todo list app
+        <LuClipboardEdit /> Todo List App
       </h1>
       <StyledForm onSubmit={handleSubmit}>
         <input

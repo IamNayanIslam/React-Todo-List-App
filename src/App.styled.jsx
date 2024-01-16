@@ -9,6 +9,7 @@ export const StyledContainer = styled.main`
   gap: 0px;
 
   h1 {
+    margin-top: 40px;
     color: #40a4ff;
     display: flex;
     align-items: center;

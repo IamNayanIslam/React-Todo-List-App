@@ -4,17 +4,31 @@ import { MdCheckBoxOutlineBlank } from "react-icons/md";
 import { MdCheckBox } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+import { FaCheckSquare } from "react-icons/fa";
 import { StyledBtnContainer, StyledTodoContainer } from "./SingleTodo.styled";
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { GlobalContext } from "../Context/GlobalContext";
 
 const SignleTodo = ({ todo }) => {
-  // const { state } = useContext(GlobalContext);
-
+  const updateInputRef = useRef(null);
   const { dispatch } = useContext(GlobalContext);
+
+  useEffect(() => {
+    todo.isEdit && (updateInputRef.current.value = todo.description);
+  }, [todo]);
 
   const toggleComplete = () => {
     dispatch({ type: "TOGGLE_COMPLETE", payload: todo.id });
+  };
+  const handelEdit = () => {
+    dispatch({ type: "IS_EDITING", payload: todo.id });
+  };
+  const handelUpdate = (event) => {
+    event.preventDefault();
+    dispatch({
+      type: "UPDATE_TODO",
+      payload: { id: todo.id, description: updateInputRef.current.value },
+    });
   };
 
   const deleteTodo = () => {
@@ -35,10 +49,19 @@ const SignleTodo = ({ todo }) => {
             onClick={toggleComplete}
           />
         )}
-
-        <p className={todo.isComplete && "complete"}>{todo.description}</p>
+        {todo.isEdit ? (
+          <form action="" onSubmit={handelUpdate}>
+            <input ref={updateInputRef} />
+          </form>
+        ) : (
+          <p className={todo.isComplete && "complete"}>{todo.description}</p>
+        )}
         <StyledBtnContainer>
-          <FaEdit className="icon edit" />
+          {!todo.isEdit ? (
+            <FaEdit onClick={handelEdit} className="icon edit" />
+          ) : (
+            <FaCheckSquare onClick={handelUpdate} className="icon edit" />
+          )}
           <MdDelete className="icon delete" onClick={deleteTodo} />
         </StyledBtnContainer>
       </StyledTodoContainer>

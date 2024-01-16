@@ -3,12 +3,20 @@ import styled from "styled-components";
 export const StyledForm = styled.form`
   width: 400px;
   padding: 20px;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
   background: #414549;
+
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
   input {
     flex: 1;
     padding: 8px;

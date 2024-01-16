@@ -1,5 +1,6 @@
 import { createContext, useEffect, useReducer } from "react";
 import { TodoReducer } from "../Reducer/TodoReducer";
+import { getDataFromLocalStorage } from "../Utility/utility";
 
 export const GlobalContext = createContext();
 
@@ -10,12 +11,12 @@ const INITIAL_STATE = {
 export const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(
     TodoReducer,
-    JSON.parse(localStorage.getItem("state")) || INITIAL_STATE
+    /* getDataFromLocalStorage("state") ||  */ INITIAL_STATE
   );
 
-  useEffect(() => {
+  /*  useEffect(() => {
     localStorage.setItem("state", JSON.stringify(state));
-  }, [state]);
+  }, [state]); */
 
   const values = { state, dispatch };
 
