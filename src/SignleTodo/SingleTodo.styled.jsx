@@ -6,7 +6,12 @@ export const StyledTodoContainer = styled.li`
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #40a4ff;
-  padding: 0px 20px;
+  padding: 5px 20px;
+  padding-bottom: 10px;
+
+  @media screen and (max-width: 500px) {
+    padding: 0px 20px;
+  }
 
   .icon {
     font-size: 24px;
@@ -28,7 +33,7 @@ export const StyledTodoContainer = styled.li`
     border: none;
     outline: none;
     border-bottom: 1px solid #40a4ff;
-    margin: 16px 0;
+    margin: 10px 0;
     color: #fff;
   }
 
