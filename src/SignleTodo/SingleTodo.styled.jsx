@@ -12,6 +12,7 @@ export const StyledTodoContainer = styled.li`
 
   @media screen and (max-width: 500px) {
     padding: 0px 20px;
+    padding-bottom: 5px;
   }
 
   .icon {
