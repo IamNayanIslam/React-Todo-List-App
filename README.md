@@ -25,25 +25,17 @@ A simple Todo List application built using React, Yarn, and Vite, allowing users
 
 To run this application locally, follow these steps:
 
-**Clone the repository:**
-
-```bash
+##Clone the repository:
 git clone https://github.com/IamNayanIslam/React-Todo-List-App.git
 
 
-**Navigate to the project directory:**
-
-```bash
+##Navigate to the project directory:
 cd React-Todo-List-App
 
-**##Install dependencies using Yarn:**
-
-```bash
+##Install dependencies using Yarn:
 yarn
 
-**Run the development server with Vite:**
-
-```bash
+##Run the development server with Vite:
 yarn dev
 
 **The app will be accessible at** http://localhost:5173 in your web browser.
