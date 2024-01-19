@@ -1,8 +1,8 @@
-# React Todo List App
+** React Todo List App**
 
 A simple Todo List application built using React, Yarn, and Vite, allowing users to add, edit, mark as completed, and delete tasks.
 
-## Features
+**Features**
 
 - Add new tasks with a description.
 - Mark tasks as completed with a checkbox.
@@ -11,7 +11,7 @@ A simple Todo List application built using React, Yarn, and Vite, allowing users
 - Prevent adding empty tasks.
 - Responsive design.
 
-## Technologies Used
+**Technologies Used**
 
 - React
 - Yarn
@@ -21,21 +21,25 @@ A simple Todo List application built using React, Yarn, and Vite, allowing users
 - JavaScript
 - Sweetalert
 
-## Getting Started
+**Getting Started**
 
 To run this application locally, follow these steps:
 
-##Clone the repository:
+**Clone the repository:**
+```bash
 git clone https://github.com/IamNayanIslam/React-Todo-List-App.git
 
 
-##Navigate to the project directory:
+**Navigate to the project directory:**
+```bash
 cd React-Todo-List-App
 
-##Install dependencies using Yarn:
+**Install dependencies using Yarn:**
+```bash
 yarn
 
-##Run the development server with Vite:
+**Run the development server with Vite:**
+```bash
 yarn dev
 
 **The app will be accessible at** http://localhost:5173 in your web browser.
